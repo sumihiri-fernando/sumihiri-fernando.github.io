@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumihiri Profilo</title>
+
+    <style>
+
+      
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("img/forest-6631518_1920.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin: 0;
+    min-height: 100vh;
+    overflow: hidden; 
+    margin: 0;
+            
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.3); 
+    backdrop-filter: blur(5px);
+    z-index: -1; 
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.2);
+    animation: ripple 5s infinite ease-in-out; /* Adds a slow-moving ripple effect */
+    z-index: -1;
+}
+
+header{    
+            color: rgb(150, 51, 2);
+            background: rgba(245, 226, 207, 0.8); 
+            font-size: 2rem;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            font-weight: bold; 
+        }
+
+    
+.self {
+            color: rgb(150, 51, 2);
+    background: rgba(245, 235, 224, 0.4); 
+    font-size: 1.8rem; 
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify; 
+    box-sizing: border-box;
+    padding: 20px; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+    margin: 0 auto; 
+    width: 400px; 
+    height: 200px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+
+.ready {
+    color: rgb(150, 51, 2);
+    background: rgba(245, 235, 224, 0.4); 
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left; 
+    box-sizing: border-box;
+    padding: 10px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+}
+.ready,h2 {
+    color: rgb(150, 51, 2);
+ 
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left; 
+    box-sizing: border-box;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+}
+.projects,h2,ul,p{
+    
+    color: rgb(150, 51, 2);
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left; 
+    box-sizing: border-box;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+}
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem; 
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: rgb(240, 83, 5); 
+    border: none; 
+    border-radius: 10px; 
+    text-align: center; 
+    text-decoration: none; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    cursor: pointer; 
+    float: right;
+    transition: background-color 0.3s ease; 
+}
+
+.button:hover {
+    background-color: rgb(120, 40, 0); 
+}
+
+
+
+      
+    </style>
+
+</head>
+<header>
+    <h1>Sumihiri Mihindukulasooriya</h1>
+</header>
+<div>
+    <img src="/img/Picture1.png" alt="Sumihiri Mihindukulasooriya">
+
+    <section>
+        <h2>About Me</h2>
+        <div class="self">
+            <p>Hello! I'm Sumihiri Mihindukulasooriya, a motivated developer with a passion for web development and system architecture. 
+            I have experience working with Java, Spring Boot, and AWS, and I love creating solutions that combine technical precision with user-friendliness.</p>
+        </div>
+        
+</section>
+
+   
+</div>
+<div>
+    <a href="/MySkills.html" class="button">Go to Next Page</a>
+
+</div>
+<body>
+
+    <footer class="last">
+       <p> &copy; 2024 Sumihiri Web Page. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
