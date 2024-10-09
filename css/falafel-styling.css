@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&family=Anton&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+h1,
+h2,
+h3,
+h4
+{
+    font-family: "Playwrite DE Ground"; 
+ }
+
+header{
+    background-image: url("/img/811-Falafel-biff-miljo-scaled-1.jpg");
+    background-position: center;
+    background-size: cover;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+header h1{
+
+    text-align: center;
+    color: white;
+    font-size: 8rem;
+    
+}
+div.bg-overlay{
+    background: black;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.5;
+}
+nav{
+    background: bisque;
+    display: flex;
+    justify-content: space-between;
+}
+nav a{
+    color: rgb(170, 128, 2);
+    font-size: 1rem;
+}
