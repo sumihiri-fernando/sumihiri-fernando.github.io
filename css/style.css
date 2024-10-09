@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&family=Anton&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+
+    html{
+        background-color: rgb(0, 0, 0, 0);
+    }
+
+body{
+    background-color: floralwhite;
+    font-family: "Open Sans",Arial, Helvetica, sans-serif;
+    max-width: 1080px;
+    margin: 1.5rem auto;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0, 0.4);
+    border-radius:1rem;
+}
+
+h1,
+h2,
+h3,
+h4
+{
+   font-family: "Playwrite DE Ground"; 
+}
+
+header{
+    text-align: center;
+}
+header h1{
+    margin-bottom: 0.4rem 0;
+}
+
+nav{
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-evenly;
+} nav a{
+    color: #025063;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: transform 0.3s ease;
+}
+nav a:hover{
+    transform: scale(1.2);
+    
+}
+main{
+   
+    padding: 1rem;
+}
+ul{
+    padding-left: 1.5rem;
+}
+p, ul{
+    margin-bottom: 1rem;
+}
+
+
+footer{
+   
+    text-align: center;
+    padding-bottom: 0.8rem;
+    font-style: italic;
+    border-top: 1 px solid aquamarine;
+}
+footer p{
+    margin-bottom: 0;
+}
