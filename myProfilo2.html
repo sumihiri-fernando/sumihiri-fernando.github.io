@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumihiri Profilo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("img/forest-6631518_1920.jpg");
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            margin: 0;
+            min-height: 100vh;
+            overflow: hidden; 
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.3); 
+            backdrop-filter: blur(5px);
+            z-index: -1; 
+        }
+
+        body::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.2);
+            animation: ripple 5s infinite ease-in-out; 
+            z-index: -1;
+        }
+
+    
+        section {
+            padding: 20px;
+            margin: 20px;
+            background: rgba(255, 255, 255, 0.8); 
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: rgb(150, 51, 2);
+        }
+
+        ul {
+            list-style-type: none; 
+            padding: 0;
+        }
+
+        ul li {
+            margin: 10px 0; 
+        }
+
+        .projects-list {
+    list-style-type: none; /* Removes default bullet points */
+    padding-left: 0;
+}
+
+.projects-list li {
+    background: rgba(245, 235, 224, 0.8); 
+    margin-bottom: 15px; 
+    padding: 15px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects-list li:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+
+.projects-list a {
+    color: rgb(150, 51, 2); 
+    text-decoration: none; 
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.projects-list a:hover {
+    color: rgb(120, 40, 0); 
+}
+
+.projects-list li::before {
+    content: "\2022"; 
+    color: rgb(150, 51, 2); 
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+
+    </style>
+</head>
+<body>
+    <section class="ready">
+        <h2>Skills</h2>
+        <ul>
+            <li>Self-leadership</li> 
+            <li>Object-oriented programming with Java SE</li>
+            <li>Systematic software development with Java</li>
+            <li>Database management</li>
+            <li>Fundamentals of Cloud computing</li>
+            <li>Administration and security in cloud environments</li>
+            <li>Technical project management</li>
+            <li>Cloud development</li>
+            <li>Web development</li>
+        </ul>
+    </section>
+
+    <div class="projects">
+        <section>
+            <h2>Projects</h2>
+            <ul class="projects-list">
+                <li><a href="https://github.com/webbapplikation/projekt1" target="_blank">Project 1</a> - A web application that manages user registration and authentication using Spring Security.</li>
+                <li><a href="https://github.com/sumihiri-fernando/Mobile_Repaire_Application" target="_blank">Project 2</a> - A REST API-based application for managing mobile repair systems.</li>
+                <li><a href="https://github.com/AwsCognito/projekt3" target="_blank">Project 3</a> - A security project that implements AWS Cognito for application security.</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Contact Me</h2>
+            <p>You can also find me at <a href="https://www.linkedin.com/in/sumihiri-mihindukulasooriya-b1760a227/" target="_blank">LinkedIn</a>.</p>
+        </section>
+    </div>
+    <footer>
+        <p> &copy; 2024 Sumihiri Web Page. All Rights Reserved.</p>
+     </footer>
+</body>
+</html>
