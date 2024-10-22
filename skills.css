@@ -1,0 +1,63 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-image: url("img/Untitled-4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Ensures the background stays fixed during scrolling */
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* Adding a transparent layer to give a water-like appearance */
+    background-blend-mode: overlay;
+    background-color: rgba(255, 255, 255, 0.2); /* Adjust the overlay color for effect */
+}
+header {
+    color: rgb(0, 0, 0);
+    background: rgba(205, 205, 205, 0.8);
+    box-shadow: 0 4px 8px rgba(184, 183, 183, 0.1);
+    padding: 20px 40px;
+}
+
+.header-topic {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    text-align: left;
+    margin: 0;
+    letter-spacing: 1rem;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-align: center;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: rgb(0, 126, 73);
+}
+
+main {
+    flex-grow: 1;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.8); /* Light background on top of the image for content readability */
+    padding: 20px;
+}

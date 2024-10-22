@@ -1,0 +1,190 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-image: url("img/Untitled-4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Ensures the background stays fixed during scrolling */
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* Adding a transparent layer to give a water-like appearance */
+    background-blend-mode: overlay;
+    background-color: rgba(255, 255, 255, 0.2); /* Adjust the overlay color for effect */
+}
+header {
+    color: rgb(0, 0, 0);
+    background: rgba(205, 205, 205, 0.8);
+    box-shadow: 0 4px 8px rgba(184, 183, 183, 0.1);
+    padding: 20px 40px;
+}
+
+.header-topic {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    text-align: left;
+    margin: 0;
+    letter-spacing: 1rem;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-align: center;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: rgb(0, 126, 73);
+}
+
+main {
+    flex-grow: 1;
+    background-color: rgba(255, 255, 255, 0.8); /* Light background on top of the image for content readability */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Align content closer to the top */
+    min-height: 100vh; /* Full height */
+   
+    padding-top: 20px; /* Small space between the navbar and content */
+}
+
+.intro-text {
+    font-size: 2rem; /* Larger font size for emphasis */
+    font-weight: 700; /* Bold font to stand out */
+    color: #3a3a3a; /* Dark teal color */
+    
+    padding: 5px; /* Adds space around the text */
+    border-radius: 10px; /* Rounded corners */
+    
+    transition: transform 0.2s ease, background-color 0.2s ease, font-size 0.2s ease; /* Smooth transition */
+    display: inline-block; /* Prevents text wrapping issues during transform */
+    
+    /* Center the text horizontally and vertically */
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-text:hover {
+    font-size: 2.1rem; /* Slightly increase the font size on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+    background: linear-gradient(90deg, rgb(204, 204, 204) 0%, rgb(172, 174, 173) 100%); /* Reverse gradient on hover */
+}
+
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 10px; /* Reduced margin at the top */
+    margin-bottom: 10px;
+    text-align: center;
+    padding-bottom: 10px; /* Adjust padding */
+    position: relative;
+}
+
+.section-title h2:after {
+    content: "";
+    display: block;
+    width: 50px; /* Adjust width for better visibility */
+    height: 3px;
+    background: green; /* Line color */
+    left: 0;
+    right: 0;
+    bottom: -5px; /* Moves the line slightly below the text */
+    margin: auto;
+}
+.imgProfile {
+    max-width: 45%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    margin: 0;       /* Reduced margin to minimize space */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.col-lg-8.content {
+    padding: 10px 20px;    /* Adjust padding */
+    margin: 0;             /* Ensure no extra margin */
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Center the content */
+    justify-content: center;
+}
+
+
+
+
+
+
+
+.about-details {
+    display: flex;
+    align-items: flex-start; /* Align to the top for closer spacing */
+    gap: 0px;               /* Reduce space between image and text content */
+    margin-bottom: 0;        /* Remove bottom margin for closer spacing */
+    padding-bottom: 0;
+
+}
+ /* Ensures no extra space around the list */
+ .colo2 {
+    margin: 0;               /* Remove any external margin from the div */
+    padding: 0;              /* Remove padding to bring content closer */
+}
+.colo2 ul {
+    list-style: none;        /* Remove bullet points */
+    padding-left: 0;         /* Remove padding */
+    margin: 0; 
+  }
+
+
+.colo2 ul li {
+    margin-bottom: 15px;     /* Reduce space between list items */
+    position: relative;
+    padding-left: 15px;
+}
+
+.colo2 ul li::before {
+    content: "<"; /* Custom bullet point */
+    position: absolute;
+    left: 0; /* Position it to the left of the text */
+    color: green; /* Color for the custom bullet */
+    font-weight: bold; /* Bold to emphasize the symbol */
+    font-size: 1.2rem; /* Slightly larger size for visibility */
+    transform: translateY(1px); /* Adjust to align vertically */
+}
+
+footer {
+    background: rgba(205, 205, 205, 0.8);
+    box-shadow: 0 2px 4px rgba(184, 183, 183, 0.1);
+    padding: 10px 20px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-top: auto; /* Ensures the footer stays at the bottom */
+}
+
+footer p {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 14px;
+    margin: 0;
+}
