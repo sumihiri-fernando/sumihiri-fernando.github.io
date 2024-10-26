@@ -130,8 +130,31 @@ main {
     flex-direction: column;
     align-items: center;    /* Center the content */
     justify-content: center;
+    width:60%;
 }
 
+.typewriter h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid rgb(3, 145, 24); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
 
 
 
@@ -157,22 +180,18 @@ main {
     margin: 0; 
   }
 
-
-.colo2 ul li {
-    margin-bottom: 15px;     /* Reduce space between list items */
+  .colo2 ul li {
+    color: black; /* Keep the text color unchanged */
+    margin-bottom: 15px;
     position: relative;
     padding-left: 15px;
 }
 
-.colo2 ul li::before {
-    content: "<"; /* Custom bullet point */
-    position: absolute;
-    left: 0; /* Position it to the left of the text */
-    color: green; /* Color for the custom bullet */
-    font-weight: bold; /* Bold to emphasize the symbol */
-    font-size: 1.2rem; /* Slightly larger size for visibility */
-    transform: translateY(1px); /* Adjust to align vertically */
+.colo2 ul li i {
+    color: rgb(2, 147, 38); /* Apply green color to icons only */
 }
+
+
 
 footer {
     background: rgba(205, 205, 205, 0.8);
@@ -187,4 +206,8 @@ footer p {
     font-family: 'Roboto', Arial, sans-serif;
     font-size: 14px;
     margin: 0;
+}
+.colo1{
+    margin-top: 80px;
+    width: 40%;
 }
