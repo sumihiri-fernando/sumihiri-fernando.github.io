@@ -4,14 +4,15 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Ensures the background stays fixed during scrolling */
+    background-attachment: fixed;
     margin: 0;
     min-height: 100vh;
     display: flex;
-    flex-direction: column; /* Adding a transparent layer to give a water-like appearance */
+    flex-direction: column;
     background-blend-mode: overlay;
-    background-color: rgba(255, 255, 255, 0.2); /* Adjust the overlay color for effect */
+    background-color: rgba(255, 255, 255, 0.2);
 }
+
 header {
     color: rgb(0, 0, 0);
     background: rgba(205, 205, 205, 0.8);
@@ -31,15 +32,14 @@ header h1 {
     font-size: 3rem;
     font-weight: 300;
     text-align: left;
-    text-shadow: 10px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
     margin: 0;
-    letter-spacing: 1rem;
+    letter-spacing: 0.1rem;
 }
 
 header h3 {
     font-size: 1rem;
     font-weight: 300;
-    text-shadow: 10px;
     margin: 0;
 }
 
@@ -55,7 +55,6 @@ nav ul li a {
     color: rgb(0, 0, 0);
     font-size: 1.5rem;
     text-decoration: none;
-    text-align: center;
     transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
@@ -71,21 +70,8 @@ section {
     border-radius: 10px;
 }
 
-h2 {
-    color: black;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    margin: 10px 0;
-}
-
 .projects-list {
-    list-style-type: none; /* Removes default bullet points */
+    list-style-type: none;
     padding-left: 0;
 }
 
@@ -108,19 +94,10 @@ ul li {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
-    cursor: pointer;
 }
 
 .projects-list a:hover {
     color: rgb(0, 175, 223);
-}
-
-.projects-list li::before {
-    color: black;
-    font-weight: bold;
-    display: inline-block;
-    width: 1rem;
-    margin-left: -1rem;
 }
 
 footer {
@@ -128,14 +105,61 @@ footer {
     box-shadow: 0 2px 4px rgba(184, 183, 183, 0.1);
     padding: 10px 20px;
     text-align: center;
-    position: relative; /* Ensure it is positioned correctly */
-    width: 100%; /* Full width */
-    bottom: 0; /* Stick to the bottom */
+    width: 100%;
+    bottom: 0;
     color: rgb(0, 0, 0);
 }
 
 footer p {
-    font-family: 'Roboto', Arial, sans-serif; /* Ensure consistent font */
     font-size: 14px;
-    margin: 0; /* Remove default margin */
+    margin: 0;
+}
+
+/* Media Query for Mobile View */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+        letter-spacing: 0.05rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+
+    .projects-list li {
+        margin: 10px 0;
+        padding: 10px;
+    }
+    
+    footer p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+        letter-spacing: 0.03rem;
+    }
+
+    header h3 {
+        font-size: 0.8rem;
+    }
+    
+    nav ul {
+        gap: 0.5rem;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+    
+    .projects-list li {
+        padding: 8px;
+    }
 }
