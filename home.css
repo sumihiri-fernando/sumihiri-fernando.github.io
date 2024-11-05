@@ -1,4 +1,4 @@
-/* Basic Body and Background Styling */
+
 body {
     font-family: 'Roboto', Arial, sans-serif;
     background-image: url("img/Untitled-4.jpg");
@@ -11,7 +11,7 @@ body {
 }
 
 main {
-    flex-grow: 1; /* Pushes the footer to the bottom */
+    flex-grow: 1; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,7 +27,6 @@ body::before {
     right: 0;
     bottom: 0;
     background: rgba(255, 255, 255, 0.3);
-    
     z-index: -1;
 }
 
@@ -51,7 +50,6 @@ header h1 {
     font-size: 3rem;
     font-weight: 300;
     text-align: left;
-    text-shadow: 10px;
     margin: 0;
     letter-spacing: 1rem;
 }
@@ -59,7 +57,6 @@ header h1 {
 header h3 {
     font-size: 1rem;
     font-weight: 300;
-    text-shadow: 10px;
     margin: 0;
 }
 
@@ -75,8 +72,7 @@ nav ul li a {
     color: rgb(0, 0, 0);
     font-size: 1.5rem;
     text-decoration: none;
-    text-align: center;
-    transition: color 0.3s ease, text-decoration 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
@@ -84,11 +80,12 @@ nav ul li a:hover {
     color: rgb(0, 126, 73);
 }
 
+/* Content Styling */
 .my {
     text-align: center;
     padding: 20px;
-    
 }
+
 .language-toggle button {
     margin: 0 5px;
     padding: 8px 16px;
@@ -96,30 +93,27 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
-
-/* Description Styles */
 section.description h1 {
     color: rgb(46, 46, 46);
     font-size: 4rem;
     margin: 10px 0;
-    text-shadow: 2px 2px 5px white; /* Proper text-shadow syntax */
+    text-shadow: 2px 2px 5px white;
 }
 
 section.description h3 {
     color: rgb(37, 35, 35);
     font-size: 1.5rem;
     margin-top: 20px;
-    text-shadow: 2px 2px 5px white; /* Proper text-shadow syntax */
+    text-shadow: 2px 2px 5px white;
 }
 
-/* Button Container and Button Styling */
+/* Button Styling */
 .button-style a {
-    background-color:rgb(0, 126, 73);
+    background-color: rgb(0, 126, 73);
     border-radius: 28px;
     display: inline-block;
     cursor: pointer;
     color: #ffffff;
-    font-family: 'Roboto', Arial, sans-serif;
     font-size: 17px;
     padding: 16px 31px;
     text-decoration: none;
@@ -138,11 +132,92 @@ footer {
     padding: 10px 20px;
     text-align: center;
     color: rgb(0, 0, 0);
-    margin-top: auto; /* Ensures the footer stays at the bottom */
+    margin-top: auto;
 }
 
 footer p {
-    font-family: 'Roboto', Arial, sans-serif;
     font-size: 14px;
     margin: 0;
+}
+
+/* Media Query for Mobile View */
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 2.5rem;
+        letter-spacing: 0.8rem;
+    }
+
+    nav ul {
+        gap: 1.5rem;
+    }
+
+    nav ul li a {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+        letter-spacing: 0.5rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+
+    .header-topic {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    section.description h1 {
+        font-size: 3rem;
+    }
+
+    section.description h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+        letter-spacing: 0.2rem;
+    }
+
+    header h3 {
+        font-size: 0.9rem;
+    }
+
+    nav ul {
+        gap: 0.5rem;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    section.description h1 {
+        font-size: 2.5rem;
+    }
+
+    section.description h3 {
+        font-size: 1rem;
+    }
+
+    .button-style a {
+        font-size: 14px;
+        padding: 12px 24px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
 }
