@@ -1,17 +1,19 @@
+/* General styling */
 body {
     font-family: 'Roboto', Arial, sans-serif;
-    background-image: url("img/Untitled-4.jpg");
+    background-color: gray ;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Ensures the background stays fixed during scrolling */
+    background-attachment: fixed; /* Background stays fixed during scrolling */
     margin: 0;
     min-height: 100vh;
     display: flex;
-    flex-direction: column; /* Adding a transparent layer to give a water-like appearance */
+    flex-direction: column; /* Flexbox layout */
     background-blend-mode: overlay;
-    background-color: rgba(255, 255, 255, 0.2); /* Adjust the overlay color for effect */
+    background-color: rgba(255, 255, 255, 0.2); /* Overlay for effect */
 }
+
 header {
     color: rgb(0, 0, 0);
     background: rgba(205, 205, 205, 0.8);
@@ -57,7 +59,102 @@ nav ul li a:hover {
 
 main {
     flex-grow: 1;
-    display: block;
-    background-color: rgba(255, 255, 255, 0.8); /* Light background on top of the image for content readability */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for readability */
+    display: flex;
+    justify-content: left; /* Center horizontally */
+    align-items: flex-start; /* Align content closer to the top */
+    min-height: 100vh; /* Full height */
+    padding-top: 20px; /* Space between the navbar and content */
+}
+
+/* Intro text hover effect */
+.intro-text:hover {
+    font-size: 2.1rem; /* Slightly increase the font size on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+    background: linear-gradient(90deg, rgb(204, 204, 204) 0%, rgb(172, 174, 173) 100%); /* Gradient on hover */
+}
+
+/* Section styling */
+.ready {
+    text-align: left;
+    margin: 20px auto;
     padding: 20px;
+    max-width: 800px;
+}
+
+.ready h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Skills list styling */
+.main {
+    max-width: 800px; /* Maximum width for the main content */
+    margin: 20px auto; /* Centering */
+    padding: 20px;
+    background: white; /* White background for content area */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.section {
+    margin-bottom: 20px; /* Space between sections */
+}
+
+.section-title {
+    text-align: left; /* Center the title */
+}
+
+h2 {
+    color: #333; /* Darker color for headers */
+    border-bottom: 2px solid #028938; /* Blue underline for headers */
+    padding-bottom: 5px; /* Space below the header */
+}
+
+ul {
+    list-style-type: disc; /* Default bullet style */
+    margin-left: 20px; /* Indent the list */
+}
+
+li {
+    margin-bottom: 8px; /* Space between list items */
+    color: #555; /* Slightly lighter color for list items */
+}
+
+.container {
+    padding: 20px; /* Padding around the container */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    h2 {
+        font-size: 1.5em; /* Smaller header size on mobile */
+    }
+
+    .main {
+        padding: 15px; /* Less padding on smaller screens */
+    }
+}
+
+/* Footer styling */
+footer {
+    background: rgba(205, 205, 205, 0.8);
+    box-shadow: 0 2px 4px rgba(184, 183, 183, 0.1);
+    padding: 10px 20px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-top: auto; /* Ensures the footer stays at the bottom */
+}
+
+footer p {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Specific class adjustments */
+.colo1 {
+    margin-top: 80px;
+    width: 40%; /* Adjust this width based on your layout */
 }

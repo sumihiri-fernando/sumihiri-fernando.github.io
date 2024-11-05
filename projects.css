@@ -3,10 +3,14 @@ body {
     background-image: url("img/Untitled-4.jpg");
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Ensures the background stays fixed during scrolling */
     margin: 0;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Adding a transparent layer to give a water-like appearance */
+    background-blend-mode: overlay;
+    background-color: rgba(255, 255, 255, 0.2); /* Adjust the overlay color for effect */
 }
 header {
     color: rgb(0, 0, 0);
