@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sumihiri Mihindukulasooriya | Cloud Developer</title>
-    <link rel="icon" type="image/x-icon" href="/img/img_2.png">
+    <link rel="icon" type="image/x-icon" href="/img/logo.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -20,25 +20,59 @@
                     <li><a href="aboutMe.html">About</a></li>
                     <li><a href="skills.html">Skills</a></li>
                     <li><a href="projects.html">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>  
         </div>
+
+        <div class="mobile-container">
+            <div class="topnav">
+              <a href="#home" class="active">Sumihiri</a>
+              <div id="myLinks">
+                <a href="home.html">Home</a>
+                <a href="aboutMe.html">About</a>
+                <a href="skills.html">Skills</a>
+                <a href="projects.html">Projects</a>
+                <a href="#contact">Contact</a>
+                <a href="mycv.pdf">CV</a>
+              </div>
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+            </div>
+        </div>
     </header>
 
+
+    
+
     <main class="my">
-        <section class="description">
+        <section class="description typewriter descty">
             <h1>Sumihiri Mihindukulasooriya</h1> 
             <h3>I'm a Cloud Developer.......</h3>
-        </section>
-        <div class="button-style">
+
+            <div class="button-style">
       
-            <a href="aboutMe.html" class="myButton">ABOUT ME</a>
-        </div>
+              <a href="aboutMe.html" class="myButton">ABOUT ME</a>
+          </div>
+        </section>
+        
     </main>
+    
 
     <footer>
         <p>&copy; 2024 Sumihiri Mihindukulasooriya &mdash; All Rights Reserved.</p>
     </footer>
 </body>
+
+<script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    </script>
 </html>

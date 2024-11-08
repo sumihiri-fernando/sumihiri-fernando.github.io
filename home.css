@@ -31,12 +31,7 @@ body::before {
 }
 
 /* Header Styles */
-header {
-    color: rgb(0, 0, 0);
-    background: rgba(205, 205, 205, 0.8);
-    box-shadow: 0 4px 8px rgba(184, 183, 183, 0.1);
-    padding: 20px 40px;
-}
+
 
 .header-topic {
     display: flex;
@@ -48,7 +43,7 @@ header {
 
 header h1 {
     font-size: 3rem;
-    font-weight: 300;
+    font-weight: 400;
     text-align: left;
     margin: 0;
     letter-spacing: 1rem;
@@ -105,6 +100,7 @@ section.description h3 {
     font-size: 1.5rem;
     margin-top: 20px;
     text-shadow: 2px 2px 5px white;
+    text-align: left;
 }
 
 /* Button Styling */
@@ -156,11 +152,22 @@ footer p {
     }
 }
 
+@media (min-width: 768px) {
+.mobile-container{display: none;}
+header {
+    color: rgb(0, 0, 0);
+    background: rgba(205, 205, 205, 0.8);
+    box-shadow: 0 4px 8px rgba(184, 183, 183, 0.1);
+    padding: 20px 40px;
+}
+}
+
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
         letter-spacing: 0.5rem;
     }
+    .header{padding: 0px;}
 
     nav ul {
         gap: 1rem;
@@ -184,6 +191,64 @@ footer p {
     section.description h3 {
         font-size: 1.3rem;
     }
+    
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-image: url("img/security.jpg");
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.mobile-container {
+    max-width: 480px;
+    margin: auto;
+    color: white;
+    border-radius: 10px;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+  }
+  
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  .topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .active {
+    background-color: #4e8faf;
+    color: white;
+  }
+  .header-topic{
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
@@ -221,3 +286,35 @@ footer p {
         font-size: 12px;
     }
 }
+.typewriter h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid rgb(3, 145, 24); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+
+  .descty{
+    position: absolute;
+    z-index: 1;
+    color: #000;
+    background-color: #ffffff99;
+    padding: 15px;
+    border-radius: 15px;
+  }
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumihiri Contact</title>
+    <link rel="icon" type="image/x-icon" href="/img/logo.png"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <div class="header-topic">
+            <h1>SUMIHIRI</h1>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="aboutMe.html">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>  
+        </div>
+    </header>
+
+
+
+    <main class="main">
+        <section id="about" class="about section">
+            <div class="container section-title">
+                <h2 class="projh2">Contact Me</h2>
+            </div>
+        </section>
+    <!-- Contact Us Section -->
+    <main id="contact">
+
+        <div class="contactrow">
+            <div class="femail">Contact No : 0000000000</div>
+            <div class="femail">Email Address : test@test.lk</div>
+            <div class="femail">
+
+                <div class="socialtrow">
+                    <div class="socialicon"><i class="fa-brands fa-facebook"></i></div>
+                    <div class="socialicon"><i class="fa-brands fa-instagram"></i></div>
+                    <div class="socialicon"><i class="fa-brands fa-youtube"></i></div>
+                    <div class="socialicon"><i class="fa-brands fa-tiktok"></i></div>
+                    <div class="socialicon"><i class="fa-brands fa-linkedin"></i></div>
+                </div>
+
+
+            </div>
+        </div>
+
+        
+        <div class="contact-photo">
+            
+            
+            <br><br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d64560.06084429681!2d16.46269118649518!3d59.624652956505365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465e4281455ba9a7%3A0xbc415db6e2654020!2zVsOkc3RlcsOlcw!5e0!3m2!1sen!2sse!4v1730847846392!5m2!1sen!2sse" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+        
+        </div>
+        <div class="contact-info">
+            
+            <p>If you have any questions or would like to reach out, please fill out the form below or get in touch directly.</p>
+            <form id="dataForm" class="contact-form">
+                
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="email" id="email" placeholder="Your Email" required>
+    <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+    <button type="button" onclick="saveData()">Save Data</button>
+
+    Enter record id to update<br>
+
+    <input type="number" id="id" placeholder="Record ID" required>
+    <button type="button" onclick="updateData()">Update Data</button>
+            </form>
+
+            <h2>Saved Data:</h2>
+            <ul id="dataList"></ul>
+            
+        </div>
+    </main>
+</main>
+
+    <footer>
+        <p>&copy; 2024 Sumihiri Mihindukulasooriya &mdash; All Rights Reserved.</p>
+    </footer>
+
+</body>
+<script src="indexdbjava.js"></script>
+</html>

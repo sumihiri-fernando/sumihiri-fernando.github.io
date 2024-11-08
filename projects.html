@@ -4,57 +4,177 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sumihiri Projects</title>
+    <link rel="icon" type="image/x-icon" href="/img/logo.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap">
-    <link rel="stylesheet" href="projects.css">
+    
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+<link rel="stylesheet" href="projects.css">
+
 </head>
 <body>
+
+    <!-- Navigation -->
     <header>
         <div class="header-topic">
             <h1>SUMIHIRI</h1>
-        
             <nav>
                 <ul>
-                    <li><a href="myPortfolio.html">Home</a></li>
-                    <li><a href="myProfilo2.html">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="aboutMe.html">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
                     <li><a href="projects.html">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>  
         </div>
     </header>
 
-    <main>
-        <section id="Projects" class="Projects section">
+    <main class="main">
+        <section id="about" class="about section">
             <div class="container section-title">
-                <h2>Projects</h2>
+                <h2 class="projh2">Projects</h2>
             </div>
-            <div class="col-lg-3 fadeffect" style="background-size: cover;">
-                <div class="project-item init" data-aos="flip-left" style="background-size: cover;">
-                    <a href="https://github.com/webbapplikation/projekt1" target="_blank">
-                        A web application that manages user registration and authentication using Spring Security
-                    </a>
-                    <div class="projekt1-img" style="background-size: cover;">
-                        <img src="img/cognito.png" alt="Cognito image" loading="lazy">
+        </section>
+        
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <img src="img/project1.jpeg" alt="Project 1">
+                    <div class="project-card-content">
+                        <h3>Security in a cloud environment</h3>
+                        <p>A web application that manages user registration and authentication using Spring Security</p>
+                        <div class="extra-content" style="display: none;">
+                            <p>AWS Cognito provides secure and scalable user authentication, authorization, and user management. Integrating Cognito with a Spring Boot application allows developers to leverage these features for their web applications.
+                                <br>
+                                <a class="gitbtn" href="https://github.com/sumihiri-fernando/Cognito.git" target="_blank">View on Github</a>
+                                
+
+                            </p>
+                        </div>
+                        <button onclick="toggleReadMore(this)">Read More</button>
+                        
+                    </div>
+                    
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <img src="img/phone.webp" alt="Project 2">
+                    <div class="project-card-content">
+                        <h3>Mobile Repair Management</h3>
+                        <p>A REST API-based application for managing mobile repair systems</p>
+                        <div class="extra-content" style="display: none;">
+                            <p>This project aims to develop a comprehensive program for a mobile repair company to manage repair jobs, mobile devices, and customers. The system will include functionalities for CRUD operations on these resources and integration with AWS S3 for file uploads
+                                <br>
+                                <a class="gitbtn" href="https://github.com/sumihiri-fernando/Cognito.git" target="_blank">View on Github</a>
+                                
+                            </p>
+                        </div>
+                        <button onclick="toggleReadMore(this)">Read More</button>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <img src="img/project3.jpeg" alt="Project 3">
+                    <div class="project-card-content">
+                        <h3>Weather Application</h3>
+                        <p>A Spring Boot-based web application that manages information about countries, cities, and weather</p>
+                        <div class="extra-content" style="display: none;">
+                            <p>This Spring Boot application uses Spring Security with Amazon Cognito for secure user authentication...
+                                <br>
+                                <a class="gitbtn" href="https://github.com/sumihiri-fernando/Cognito.git" target="_blank">View on Github</a>
+                                
+                            </p>
+                        </div>
+                        <button onclick="toggleReadMore(this)">Read More</button>
+                        
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <img src="img/portal.png" alt="Project 4">
+                    <div class="project-card-content">
+                        <h3>Application Portal</h3>
+                        <p>A web application that manages user registration and authentication using AWS Security</p>
+                        <div class="extra-content" style="display: none;">
+                            <p>This Spring Boot application uses Spring Security with Amazon Cognito for secure user authentication, allowing registration, login, and access management. It features a relational database with "students" and "teachers" tables, supporting CRUD operations for authenticated users to manage data. Deployment is handled on AWS with EC2 for hosting and CodePipeline for automated CI/CD, ensuring efficient updates and scalability
+                            <br>
+                                <a class="gitbtn" href="https://github.com/sumihiri-fernando/Cognito.git" target="_blank">View on Github</a></p>
+                        </div>
+                        <button onclick="toggleReadMore(this)">Read More</button>
+                    </div>
+                </div>
+
+                <!-- Project 5-->
+                <div class="project-card">
+                    <img src="img/web_security.png" alt="Project 5">
+                    <div class="project-card-content">
+                        <h3>Web Security & Security Measures</h3>
+                        <p>A web security application that manages focusing on protecting against Cross-site Request Forgery (CSRF)</p>
+                        <div class="extra-content" style="display: none;">
+                            <p>This simple web application, built with Spring Boot, focuses on understanding and mitigating key web security vulnerabilities, specifically Cross-site Scripting (XSS) and Cross-site Request Forgery (CSRF). By implementing a basic message form, we observed how XSS attacks can execute scripts in a user's browser if not properly sanitized. To mitigate these vulnerabilities, we integrated Spring Security’s CSRF protection, which prevents unauthorized cross-site requests. This process emphasizes securing web applications and protecting users from common security threats
+                            <br>
+                            <a class="gitbtn" href="https://github.com/sumihiri-fernando/Cognito.git" target="_blank">View on Github</a>
+                        </p>
+                        </div>
+                        <button onclick="toggleReadMore(this)">Read More</button>
                     </div>
                 </div>
             </div>
-
-            <div>
-                <ul >
-                    <li><a href="https://github.com/webbapplikation/projekt1" target="_blank">A web application that manages user registration and authentication using Spring Security</a></li>
-                    <li><a href="https://github.com/sumihiri-fernando/Mobile_Repaire_Application" target="_blank">A REST API-based application for managing mobile repair systems</a></li>
-                    <li><a href="https://github.com/AwsCognito/projekt3" target="_blank">A security project that implements AWS Cognito for application security.</a> </li>
-                    <li><a href="https://github.com/AwsCognito/projekt3" target="_blank">A security project that implements AWS Cognito for application security.</a> </li>
-                </ul>
-            </div>
         </section>
     </main>
-    
-<footer>
-    <p>&copy; 2024 Sumihiri Mihindukulasooriya &mdash; All Rights Reserved.</p>
-</footer>
+
+    <footer>
+        <p>&copy; 2024 All Rights Reserved. Sumihiri Mihindukulasooriya</p>
+    </footer>
+
+ <!-- Slick JS -->
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+ <!-- JavaScript for Preloader and Read More Button -->
+ <script>
 
 
+     // Toggle "Read More" button functionality
+     function toggleReadMore(button) {
+         const extraContent = button.previousElementSibling;
+         if (extraContent.style.display === "none" || extraContent.style.display === "") {
+             extraContent.style.display = "block";
+             button.textContent = "Read Less";
+         } else {
+             extraContent.style.display = "none";
+             button.textContent = "Read More";
+         }
+     }
+
+     // Initialize Slick Slider
+     $(document).ready(function(){
+         $('.projects-grid').slick({
+             slidesToShow: 3,
+             slidesToScroll: 1,
+             dots: true,
+             arrows: true,
+             infinite: true,
+             prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+             nextArrow: '<button type="button" class="slick-next">Next</button>',
+             responsive: [
+                 {
+                     breakpoint: 768,
+                     settings: {
+                         slidesToShow: 1,
+                         slidesToScroll: 1
+                     }
+                 }
+             ]
+         });
+     });
+ </script>
 </body>
 </html>

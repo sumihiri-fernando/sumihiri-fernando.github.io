@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndexedDB Demo</title>
+</head>
+<body>
+    <h1>Spara och Uppdatera Data i IndexedDB</h1>
+    
+    <label for="dataInput">Skriv in data:</label>
+    <input type="text" id="dataInput">
+    <button onclick="saveData()">Spara Data</button>
+    <button onclick="updateData()">Uppdatera Data</button>
+    
+    <h2>Nuvarande Data:</h2>
+    <ul id="dataList"></ul>
+
+    <script src="indexdbjava.js"></script>
+</body>
+</html>

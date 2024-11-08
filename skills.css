@@ -1,29 +1,18 @@
 body {
     font-family: 'Roboto', Arial, sans-serif;
-    background-color: gray;
+    background-image: url("img/Untitled-4.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: fixed; /* Ensures the background stays fixed during scrolling */
     margin: 0;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
-    position: relative;
+    flex-direction: column; /* Adding a transparent layer to give a water-like appearance */
+    background-blend-mode: overlay;
+    background-color: rgba(255, 255, 255, 0.2); /* Adjust the overlay color for effect */
 }
-
-body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.2);
-    z-index: -1;
-}
-
-header, footer {
+header {
     color: rgb(0, 0, 0);
     background: rgba(205, 205, 205, 0.8);
     box-shadow: 0 4px 8px rgba(184, 183, 183, 0.1);
@@ -44,6 +33,17 @@ header h1 {
     text-align: left;
     margin: 0;
     letter-spacing: 1rem;
+}
+
+.header-topic h1{
+    all: unset; /* Remove all inherited styles */
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: left;
+    margin: 0;
+    letter-spacing: 1rem;
+    font-family: Arial, sans-serif;
+    color: rgb(0, 0, 0);
 }
 
 nav ul {
@@ -68,51 +68,282 @@ nav ul li a:hover {
 
 main {
     flex-grow: 1;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.8); /* Light background on top of the image for content readability */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Align content closer to the top */
+    min-height: 100vh; /* Full height */
+    padding-top: 20px; /* Small space between the navbar and content */
+}
+
+.intro-text {
+    font-size: 2rem; /* Larger font size for emphasis */
+    font-weight: 300; /* Bold font to stand out */
+    color: #3a3a3a; /* Dark teal color */
+    padding: 5px; /* Adds space around the text */
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.2s ease, background-color 0.2s ease, font-size 0.2s ease; /* Smooth transition */
+    display: inline-block; /* Prevents text wrapping issues during transform */
+    margin: 0 auto; /* Center the text */
+    text-align: center; /* Center the text */
+}
+
+.intro-text:hover {
+    font-size: 2.1rem; /* Slightly increase the font size on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+    background: linear-gradient(90deg, rgb(204, 204, 204) 0%, rgb(172, 174, 173) 100%); /* Reverse gradient on hover */
+}
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: 300;
+    margin: 10px 0; /* Reduced margin at the top and bottom */
+    text-align: center;
+    padding-bottom: 10px; /* Adjust padding */
+    position: relative;
+}
+
+.section-title h2::after {
+    content: "";
+    display: block;
+    width: 50px; /* Adjust width for better visibility */
+    height: 3px; /* Line thickness */
+    background: green; /* Line color */
+    margin: auto; /* Center the line */
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px; /* Moves the line slightly below the text */
+}
+
+.ready {
+    display: flex;
+    flex-wrap: wrap; /* Allows the boxes to wrap in smaller screens */
+    justify-content: center; /* Center the boxes */
+    margin: 20px; /* Add margin around the section */
+    gap: 40px; /* Space between boxes */
+}
+.skills-icons {
+    text-align: center; /* Center the icons */
+    margin: 20px 0; /* Add some margin around the section */
+   
+}
+
+.icon-container {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    padding-top: 20px;
+    gap: 30px; /* Reduced space between icons */
 }
 
-.main {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+.icon-container i {
+    font-size: 66px;
+    color: rgb(0 0 0);
+    transition: transform 0.3s;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
-.section {
-    margin-bottom: 20px;
+.icon-container i:hover {
+    transform: scale(1.1); /* Slightly increase size on hover */
 }
 
-.section-title {
-    text-align: left;
+.skills-box {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly more opaque for contrast */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    padding: 20px; /* Padding inside the box */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+    width: 300px; /* Fixed width for consistency */
 }
 
-h2 {
-    color: #333;
-    border-bottom: 2px solid #028938;
-    padding-bottom: 5px;
+.skills-box:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
 }
 
-ul {
-    list-style-type: disc;
-    margin-left: 20px;
+.skills-box h2 {
+    color: #333; /* Heading color */
+    margin-bottom: 10px; /* Space below the heading */
 }
 
-li {
-    margin-bottom: 8px;
-    color: #555;
+.skills-box ul {
+    padding-left: 20px; /* Indentation for the list */
 }
 
-.container {
-    padding: 20px;
-    width: 100%;
-    max-width: 1000px;
+.skills-box ul li {
+    color: black; /* Text color for the list items */
+    margin-bottom: 5px; /* Space between list items */
+    position: relative; /* Needed for pseudo-elements */
+    padding-left: 20px; /* Padding to leave space for icons */
+}
+
+.skills-box ul li i {
+    color: rgb(2, 147, 38); /* Green color for icons */
+    position: absolute; /* Positioning for icons */
+    left: 0; /* Align icons to the left */
+}
+
+
+.imgProfile {
+    max-width: 45%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    margin: 0 auto; /* Center the image */
+}
+
+.col-lg-8.content {
+    padding: 10px 20px; /* Adjust padding */
+    margin: 0; /* Ensure no extra margin */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content */
+    justify-content: center;
+    width: 60%;
+}
+
+.typewriter h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid rgb(3, 145, 24); /* The typewriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
+
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 2.5rem;
+        letter-spacing: 0.8rem;
+    }
+    nav ul {
+        gap: 1.5rem;
+    }
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+    .section-title h2 {
+        font-size: 28px;
+    }
+    .imgProfile {
+        max-width: 60%; /* Reduce image size */
+    }
+    .col-lg-8.content {
+        width: 80%; /* Expand content width for smaller screens */
+    }
+}
+
+/* Media Query for Mobile View */
+@media (max-width: 768px) {
+    .header-topic {
+        flex-direction: column;
+        align-items: center;
+    }
+    header h1 {
+        font-size: 2rem;
+        letter-spacing: 0.5rem;
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    nav ul li a {
+        font-size: 1rem;
+    }
+    main {
+        padding-top: 10px;
+    }
+    .intro-text {
+        font-size: 1.5rem;
+        padding: 5px 10px;
+    }
+    .section-title h2 {
+        font-size: 24px;
+    }
+    .imgProfile {
+        max-width: 70%;
+    }
+    .col-lg-8.content {
+        width: 90%;
+    }
+}
+
+/* Responsive adjustments for very small devices */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+        letter-spacing: 0.3rem;
+    }
+    .intro-text {
+        font-size: 1.3rem;
+    }
+    .section-title h2 {
+        font-size: 20px;
+    }
+    .imgProfile {
+        max-width: 90%;
+    }
+    .col-lg-8.content {
+        width: 100%;
+    }
+    .typewriter h1 {
+        font-size: 1.5rem;
+    }
+}
+
+.about-details {
+    display: flex;
+    align-items: flex-start; 
+    gap: 0px;               
+    margin-bottom: 0;        
+    padding-bottom: 0;
+}
+
+.colo2 {
+    margin: 0;              
+    padding: 0;              
+}
+
+.colo2 ul {
+    list-style: none;        
+    padding-left: 0;         
+    margin: 0; 
+}
+
+.colo2 ul li {
+    color: black;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.colo2 ul li i {
+    color: rgb(2, 147, 38); /* Apply green color to icons only */
+}
+
+footer {
+    background: rgba(205, 205, 205, 0.8);
+    box-shadow: 0 2px 4px rgba(184, 183, 183, 0.1);
+    padding: 10px 20px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-top: auto; 
 }
 
 footer p {
@@ -120,42 +351,12 @@ footer p {
     font-size: 14px;
     margin: 0;
 }
-
-/* Media Query for Mobile View */
-@media (max-width: 600px) {
-    h2 {
-        font-size: 1.5em;
-    }
-
-    .main {
-        padding: 15px;
-    }
-
-    header, footer {
-        padding: 10px;
-    }
-
-    header h1 {
-        font-size: 2rem;
-        letter-spacing: 0.5rem;
-    }
-
-    .header-topic {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    nav ul li a {
-        font-size: 1.2rem;
-    }
-
-    .colo1 {
-        width: 100%;
-        margin-top: 20px;
-    }
+.colo1{
+    margin-top: 80px;
+    width: 40%;
 }
+
+  .projh2{
+        text-align: center;
+      width: 100%;
+  }
