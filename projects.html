@@ -29,6 +29,22 @@
                 </ul>
             </nav>  
         </div>
+        <div class="mobile-container">
+            <div class="topnav">
+              <a href="#home" class="active">SUMIHIRI</a>
+              <div id="myLinks">
+                <a href="home.html">Home</a>
+                <a href="aboutMe.html">About</a>
+                <a href="skills.html">Skills</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+                
+              </div>
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+            </div>
+        </div>
     </header>
 
     <main class="main">
@@ -105,7 +121,7 @@
                         <div class="extra-content" style="display: none;">
                             <p>This Spring Boot application uses Spring Security with Amazon Cognito for secure user authentication, allowing registration, login, and access management. It features a relational database with "students" and "teachers" tables, supporting CRUD operations for authenticated users to manage data. Deployment is handled on AWS with EC2 for hosting and CodePipeline for automated CI/CD, ensuring efficient updates and scalability
                             <br>
-                                <a class="gitbtn" href="https://github.com/Distansakademin/cloudutveckling-spring-sumihiri-fernando" target="_blank">View on Github</a></p>
+                                <a class="gitbtn" href="https://github.com/sumihiri-fernando/cloud-development.git" target="_blank">View on Github</a></p>
                         </div>
                         <button onclick="toggleReadMore(this)">Read More</button>
                     </div>
@@ -177,4 +193,14 @@
      });
  </script>
 </body>
+<script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    </script>
 </html>

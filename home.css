@@ -239,11 +239,11 @@ body {
   
   .topnav a:hover {
     background-color: #ddd;
-    color: black;
+    color: rgb(0, 54, 16);
   }
   
   .active {
-    background-color: #4e8faf;
+    background-color: #5e9b77;
     color: white;
   }
   .header-topic{

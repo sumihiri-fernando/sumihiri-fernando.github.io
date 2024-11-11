@@ -25,6 +25,22 @@
                 </ul>
             </nav>  
         </div>
+        <div class="mobile-container">
+            <div class="topnav">
+              <a href="#about" class="active">SUMIHIRI</a>
+              <div id="myLinks">
+                <a href="home.html">Home</a>
+                <a href="aboutMe.html">About</a>
+                <a href="skills.html">Skills</a>
+                <a href="projects.html">Projects</a>
+                <a href="#contact">Contact</a>
+                
+              </div>
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+            </div>
+        </div>
     </header>
 
     <section  class="about section aboutbg">
@@ -69,4 +85,14 @@
         <p>&copy; 2024 Sumihiri Mihindukulasooriya &mdash; All Rights Reserved.</p>
     </footer>
 </body>
+<script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    </script>
 </html>
