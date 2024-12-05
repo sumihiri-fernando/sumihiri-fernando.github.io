@@ -156,6 +156,7 @@ footer p {
 }
 
 /* Responsive Adjustments */
+/* Media Query for Mobile Screens */
 @media (max-width: 768px) {
     #contact {
         flex-direction: column;
@@ -170,9 +171,10 @@ footer p {
     nav ul {
         gap: 1.5rem;
     }
-}
-/* Media Query for Mobile Screens */
-@media (max-width: 768px) {
+    .header-topic{
+        display: none;
+      }
+
     #about, #contact {
         flex-direction: column;
     }
@@ -214,12 +216,7 @@ footer p {
     bottom: -5px;
     margin: auto;
 }
-.contactrow {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    width: 100%;
-}
+
 .femail{
     background-color: #686868;
     border-radius: 8px;
@@ -228,12 +225,7 @@ footer p {
     font-size: 25px;
 }
 
-.contactrow {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    width: 100%;
-}
+
 
 .socialtrow {
     display: grid;
@@ -249,10 +241,10 @@ footer p {
 
 
 .mobile-container {
-    max-width: 480px;
     margin: auto;
     color: white;
     border-radius: 10px;
+    padding-right: 70px;
   }
   
   .topnav {
@@ -290,9 +282,7 @@ footer p {
     background-color: #5e9b77;
     color: white;
   }
-  .header-topic{
-    display: none;
-  }
+  
 /* Media Query for Mobile View */
 @media (max-width: 1024px) {
     header h1 {
@@ -364,7 +354,25 @@ header {
     }
 }
 
+@media (max-width: 768px) {
+    .contactrow {
+        display: grid;
+        
+        gap: 10px;
+        width: 100%;
+    }
+
+
+}
 @media (min-width: 768px) {
+
+    .contactrow {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        width: 100%;
+    }
+
 .mobile-container{display: none;}
 header {
     color: rgb(0, 0, 0);
@@ -403,3 +411,40 @@ header {
     section.description h3 {
         font-size: 1.3rem;
     }}
+/* Ensure better readability on small devices */
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Improve layout for small devices */
+@media (max-width: 480px) {
+    #contact {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .femail, .contact-photo, .contact-info {
+        margin-bottom: 1rem;
+    }
+
+    .femail {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .socialtrow {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contact-photo iframe {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Enhance button visibility for touch screens */
+.contact-form button {
+    font-size: 1.2rem;
+    padding: 1rem;
+}

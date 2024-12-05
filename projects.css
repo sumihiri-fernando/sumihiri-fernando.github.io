@@ -71,6 +71,7 @@ main {
     align-items: flex-start;
     min-height: 100vh;
     padding-top: 20px;
+    overflow: hidden;
 }
 .intro-text {
     font-size: 2rem; /* Larger font size for emphasis */
@@ -210,6 +211,10 @@ footer p {
 
 /* Media Query for Tablet/Mobile View */
 @media (max-width: 768px) {
+    .header-topic{
+        display: none;
+      }
+
     header h1 {
         font-size: 2rem;
         letter-spacing: 0.05rem;
@@ -380,9 +385,7 @@ footer p {
     background-color: #5e9b77;
     color: white;
   }
-  .header-topic{
-    display: none;
-  }
+  
   /* Media Query for Mobile View */
 @media (max-width: 1024px) {
     header h1 {

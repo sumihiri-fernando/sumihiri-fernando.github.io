@@ -20,7 +20,7 @@ header {
 }
 
 .header-topic {
-    display: flex;
+    display: flex !important;
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
@@ -154,7 +154,7 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
     padding: 20px; /* Padding inside the box */
     transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
-    width: 300px; /* Fixed width for consistency */
+    width: 30%; /* Fixed width for consistency */
 }
 
 .skills-box:hover {
@@ -175,7 +175,7 @@ main {
     color: black; /* Text color for the list items */
     margin-bottom: 5px; /* Space between list items */
     position: relative; /* Needed for pseudo-elements */
-    padding-left: 20px; /* Padding to leave space for icons */
+    padding-left: 0px; /* Padding to leave space for icons */
 }
 
 .skills-box ul li i {
@@ -247,6 +247,11 @@ main {
         width: 80%; /* Expand content width for smaller screens */
     }
 }
+
+@media (max-width: 768px) {
+    .header-topic{display: none !important;}
+}
+
 
 /* Media Query for Mobile View */
 @media (max-width: 768px) {
@@ -405,7 +410,7 @@ footer p {
     color: white;
   }
   .header-topic{
-    display: none;
+    display: block;
   }
 
   /* Media Query for Mobile View */
@@ -519,3 +524,44 @@ header {
     section.description h3 {
         font-size: 1.3rem;
     }}
+/* Skills Icons Section */
+.skills-icons {
+    padding: 20px 10px; /* Add spacing for the section */
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Light background */
+}
+
+/* Icon Container */
+.icon-container {
+    display: flex;
+    flex-wrap: wrap; /* Enables wrapping for smaller screens */
+    justify-content: center; /* Center-align icons */
+    gap: 20px; /* Space between icons */
+    margin: 20px auto;
+}
+
+/* Individual Icons */
+.icon-container i {
+    font-size: 4rem; /* Default icon size */
+    color: rgba(44, 44, 44, 0.8); /* Neutral color for icons */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover effects */
+}
+
+/* Hover Effect for Icons */
+.icon-container i:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    color: #28a745; /* Change to green on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .icon-container i {
+        font-size: 3rem; /* Reduce size on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .icon-container i {
+        font-size: 2.5rem; /* Further reduce size on very small screens */
+    }
+}

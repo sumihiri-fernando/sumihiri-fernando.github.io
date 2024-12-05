@@ -8,6 +8,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 main {
@@ -100,7 +101,7 @@ section.description h3 {
     font-size: 1.5rem;
     margin-top: 20px;
     text-shadow: 2px 2px 5px white;
-    text-align: left;
+
 }
 
 /* Button Styling */
@@ -152,23 +153,45 @@ footer p {
     }
 }
 
+
+
+
 @media (min-width: 768px) {
-.mobile-container{display: none;}
-header {
-    color: rgb(0, 0, 0);
-    background: rgba(205, 205, 205, 0.8);
-    box-shadow: 0 4px 8px rgba(184, 183, 183, 0.1);
-    padding: 20px 40px;
-}
+    .mobile-container{display: none;}
+    header {
+        color: rgb(0, 0, 0);
+        background: rgba(205, 205, 205, 0.8);
+        box-shadow: 0 4px 8px rgba(184, 183, 183, 0.1);
+        padding: 20px 40px;
+        
+    }
+    section.description h1 {
+        font-size: 2rem;
+    }
+
+    section.description h1 {
+        font-size: 3rem;
+    }
+    .httop{
+        font-size: 3rem;
+    font-weight: 400;
+    text-align: left;
+    margin: 0;
+    letter-spacing: 1rem;
+    }
+    
+    
 }
 
 @media (max-width: 768px) {
+    section.description h1 {
+        font-size: 19px;
+    }
     header h1 {
         font-size: 2rem;
         letter-spacing: 0.5rem;
     }
-    .header{padding: 0px;}
-
+    
     nav ul {
         gap: 1rem;
         flex-direction: column; 
@@ -184,9 +207,7 @@ header {
         text-align: center;
     }
 
-    section.description h1 {
-        font-size: 3rem;
-    }
+
 
     section.description h3 {
         font-size: 1.3rem;
@@ -209,6 +230,7 @@ body {
     margin: auto;
     color: white;
     border-radius: 10px;
+    padding: 20px 40px;
   }
   
   .topnav {
@@ -239,7 +261,7 @@ body {
   
   .topnav a:hover {
     background-color: #ddd;
-    color: rgb(0, 54, 16);
+    color: rgb(0, 37, 11);
   }
   
   .active {
@@ -269,9 +291,7 @@ body {
         font-size: 1rem;
     }
 
-    section.description h1 {
-        font-size: 2.5rem;
-    }
+    
 
     section.description h3 {
         font-size: 1rem;
@@ -316,5 +336,6 @@ body {
     background-color: #ffffff99;
     padding: 15px;
     border-radius: 15px;
+    width: 80%;
   }
 
