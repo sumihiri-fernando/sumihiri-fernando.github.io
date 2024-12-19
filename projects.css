@@ -319,9 +319,25 @@ footer p {
     background-color: #555;
 }
 .slick-next {
-    
     background: #000;
 }
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .project-card p {
+        width: 400px;
+    }
+    .slick-prev, .slick-next {
+        width: 30px;
+        height: 30px;
+        font-size: 1.2rem;
+        margin: 10px;
+    }
+    .slick-prev:after, .slick-next:after {
+        font-size: 16px;
+    }
+}
+
 .gitbtn{
  
   border: none;
@@ -440,4 +456,15 @@ header {
 
     section.description h3 {
         font-size: 1.3rem;
-    }}
+    }
+}
+@media (max-width: 768px) {
+    .slick-slider {
+        width: 100%; /* Make it full-width on mobile */
+        margin: 0 auto;
+    }
+
+    .slick-slide {
+        width: auto; /* Allow slides to adapt */
+    }
+}

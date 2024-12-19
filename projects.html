@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sumihiri Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Sumihiri Projects</title>
     <link rel="icon" type="image/x-icon" href="/img/logo.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap">
     
@@ -47,12 +46,15 @@
         </div>
     </header>
 
+    <div class="test" style="width: 100%;text-align: center;margin-top: 50px;"><div class="container section-title">
+        <h2 class="projh2">Projects</h2>
+    </div></div>
+
     <main class="main">
         <section id="about" class="about section">
-            <div class="container section-title">
-                <h2 class="projh2">Projects</h2>
-            </div>
+            
         </section>
+        
         
         <!-- Projects Section -->
         <section id="projects">
@@ -181,16 +183,38 @@
              prevArrow: '<button type="button" class="slick-prev">Previous</button>',
              nextArrow: '<button type="button" class="slick-next">Next</button>',
              responsive: [
-                 {
-                     breakpoint: 768,
-                     settings: {
-                         slidesToShow: 1,
-                         slidesToScroll: 1
-                     }
-                 }
-             ]
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
          });
      });
+     $(window).on('resize', function () {
+        $('.projects-grid').slick('setPosition');
+    });
  </script>
 </body>
 <script>
