@@ -5,16 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Sumihiri Projects</title>
     <link rel="icon" type="image/x-icon" href="/img/logo.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap">
-    
-    <!-- Slick CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
 <link rel="stylesheet" href="projects.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
-    <!-- Navigation -->
     <header>
         <div class="header-topic">
             <h1>SUMIHIRI</h1>
@@ -37,7 +33,6 @@
                 <a href="skills.html">Skills</a>
                 <a href="projects.html">Projects</a>
                 <a href="contact.html">Contact</a>
-                
               </div>
               <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
@@ -45,21 +40,14 @@
             </div>
         </div>
     </header>
-
     <div class="test" style="width: 100%;text-align: center;margin-top: 50px;"><div class="container section-title">
         <h2 class="projh2">Projects</h2>
     </div></div>
-
     <main class="main">
         <section id="about" class="about section">
-            
         </section>
-        
-        
-        <!-- Projects Section -->
         <section id="projects">
             <div class="projects-grid">
-                <!-- Project 1 -->
                 <div class="project-card">
                     <img src="img/project1.jpeg" alt="Project 1">
                     <div class="project-card-content">
@@ -69,17 +57,11 @@
                             <p>AWS Cognito provides secure and scalable user authentication, authorization, and user management. Integrating Cognito with a Spring Boot application allows developers to leverage these features for their web applications.
                                 <br>
                                 <a class="gitbtn" href="https://github.com/sumihiri-fernando/Cognito.git" target="_blank">View on Github</a>
-                                
-
                             </p>
                         </div>
                         <button onclick="toggleReadMore(this)">Read More</button>
-                        
                     </div>
-                    
                 </div>
-
-                <!-- Project 2 -->
                 <div class="project-card">
                     <img src="img/phone.webp" alt="Project 2">
                     <div class="project-card-content">
@@ -89,14 +71,11 @@
                             <p>This project aims to develop a comprehensive program for a mobile repair company to manage repair jobs, mobile devices, and customers. The system will include functionalities for CRUD operations on these resources and integration with AWS S3 for file uploads
                                 <br>
                                 <a class="gitbtn" href="https://github.com/sumihiri-fernando/Mobile_Repaire_Application.git" target="_blank">View on Github</a>
-                                
                             </p>
                         </div>
                         <button onclick="toggleReadMore(this)">Read More</button>
                     </div>
                 </div>
-
-                <!-- Project 3 -->
                 <div class="project-card">
                     <img src="img/project3.jpeg" alt="Project 3">
                     <div class="project-card-content">
@@ -106,15 +85,11 @@
                             <p>This Spring Boot application uses Spring Security with Amazon Cognito for secure user authentication...
                                 <br>
                                 <a class="gitbtn" href="https://github.com/sumihiri-fernando/spring_weather_demo" target="_blank">View on Github</a>
-                                
                             </p>
                         </div>
                         <button onclick="toggleReadMore(this)">Read More</button>
-                        
                     </div>
                 </div>
-
-                <!-- Project 4 -->
                 <div class="project-card">
                     <img src="img/portal.png" alt="Project 4">
                     <div class="project-card-content">
@@ -128,8 +103,6 @@
                         <button onclick="toggleReadMore(this)">Read More</button>
                     </div>
                 </div>
-
-                <!-- Project 5-->
                 <div class="project-card">
                     <img src="img/web_security.png" alt="Project 5">
                     <div class="project-card-content">
@@ -146,23 +119,14 @@
                 </div>
             </div>
         </section>
-
-        
     </main>
-
     <footer>
         <p>&copy; 2024 All Rights Reserved. Sumihiri Mihindukulasooriya</p>
     </footer>
-
- <!-- Slick JS -->
+</body>
  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-
- <!-- JavaScript for Preloader and Read More Button -->
  <script>
-
-
-     // Toggle "Read More" button functionality
      function toggleReadMore(button) {
          const extraContent = button.previousElementSibling;
          if (extraContent.style.display === "none" || extraContent.style.display === "") {
@@ -173,52 +137,47 @@
              button.textContent = "Read More";
          }
      }
-
-     // Initialize Slick Slider
-     $(document).ready(function(){
-         $('.projects-grid').slick({
-             slidesToShow: 3,
-             slidesToScroll: 1,
-             dots: true,
-             arrows: true,
-             infinite: true,
-             prevArrow: '<button type="button" class="slick-prev">Previous</button>',
-             nextArrow: '<button type="button" class="slick-next">Next</button>',
-             responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 2
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1
-      }
-    }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
-         });
-     });
+        $(document).ready(function(){
+            $('.projects-grid').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                dots: true,
+                arrows: true,
+                infinite: true,
+                prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+                nextArrow: '<button type="button" class="slick-next">Next</button>',
+                responsive: [
+        {
+        breakpoint: 1024,
+        settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+        }
+        },
+        {
+        breakpoint: 600,
+        settings: {
+            slidesToShow: 3,
+            slidesToScroll: 2
+        }
+        },
+        {
+        breakpoint: 480,
+        settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1
+        }
+        }
+    ]
+    });
+});
      $(window).on('resize', function () {
         $('.projects-grid').slick('setPosition');
     });
  </script>
-</body>
+
 <script>
     function myFunction() {
       var x = document.getElementById("myLinks");
